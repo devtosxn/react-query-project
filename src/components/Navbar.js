@@ -1,12 +1,26 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = ({ setPage }) => {
   return (
     <nav>
-      <button>Planets</button>
-      <button>People</button>
+      <button
+        onClick={() => {
+          setPage('planets');
+        }}>
+        Planets
+      </button>
+      <button
+        onClick={() => {
+          setPage('people');
+        }}>
+        People
+      </button>
     </nav>
   );
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+  setPage: PropTypes.func.isRequired
+};
