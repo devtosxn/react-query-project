@@ -8,8 +8,8 @@ const fetchPlanets = async () => {
 
 const Planets = () => {
   const { data, status } = useQuery('planets', fetchPlanets);
-  console.log('DATA---->', data);
-  console.log('STATUS---->', status);
+  console.log('PLANET DATA---->', data);
+  console.log('PLANET STATUS---->', status);
   return (
     <div>
       <h2>Planets Component</h2>
