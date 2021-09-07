@@ -8,11 +8,9 @@ const fetchPeople = async () => {
 
 const People = () => {
   const { data, status } = useQuery('people', fetchPeople);
-  console.log('PEOPLE DATA---->', data);
-  console.log('PEOPLE STATUS---->', status);
   return (
     <div>
-      <h2>Planets Component</h2>
+      <h2>People Component</h2>
       {status === 'loading' && <div>Loading...</div>}
       {status === 'error' && <div>Error!</div>}
       {status === 'success' && (
